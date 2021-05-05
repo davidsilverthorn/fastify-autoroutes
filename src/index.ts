@@ -117,6 +117,7 @@ function scan(
 
 function isAcceptableFile(file: string, stat: fs.Stats): boolean {
   return (
+    ( file.endsWith('.js') || file.endsWith('.ts') ) &&
     !path.basename(file).startsWith('.') &&
     !path.basename(file).startsWith('_') &&
     !file.endsWith('.map') &&
